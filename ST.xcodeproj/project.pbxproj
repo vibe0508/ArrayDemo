@@ -8,23 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		11948DE625E57C7900DC1D42 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11948DE525E57C7900DC1D42 /* main.swift */; };
+		11948E7025E76EEB00DC1D42 /* GetArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11948E6F25E76EEB00DC1D42 /* GetArray.swift */; };
+		11948E7425E76FDA00DC1D42 /* Measurements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11948E7325E76FDA00DC1D42 /* Measurements.swift */; };
+		11948E9725EC033400DC1D42 /* array.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 11948E9525EC00ED00DC1D42 /* array.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		11948DE025E57C7800DC1D42 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
+				11948E9725EC033400DC1D42 /* array.plist in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		11948DE225E57C7900DC1D42 /* ST */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ST; sourceTree = BUILT_PRODUCTS_DIR; };
 		11948DE525E57C7900DC1D42 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		11948E6F25E76EEB00DC1D42 /* GetArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetArray.swift; sourceTree = "<group>"; };
+		11948E7325E76FDA00DC1D42 /* Measurements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measurements.swift; sourceTree = "<group>"; };
+		11948E9525EC00ED00DC1D42 /* array.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = array.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +64,10 @@
 		11948DE425E57C7900DC1D42 /* ST */ = {
 			isa = PBXGroup;
 			children = (
+				11948E9525EC00ED00DC1D42 /* array.plist */,
 				11948DE525E57C7900DC1D42 /* main.swift */,
+				11948E6F25E76EEB00DC1D42 /* GetArray.swift */,
+				11948E7325E76FDA00DC1D42 /* Measurements.swift */,
 			);
 			path = ST;
 			sourceTree = "<group>";
@@ -93,6 +103,7 @@
 				TargetAttributes = {
 					11948DE125E57C7800DC1D42 = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 					};
 				};
 			};
@@ -119,6 +130,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11948E7025E76EEB00DC1D42 /* GetArray.swift in Sources */,
+				11948E7425E76FDA00DC1D42 /* Measurements.swift in Sources */,
 				11948DE625E57C7900DC1D42 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,10 +257,18 @@
 		11948DEA25E57C7900DC1D42 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3NRJ5W5TPS;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -255,10 +276,17 @@
 		11948DEB25E57C7900DC1D42 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3NRJ5W5TPS;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
